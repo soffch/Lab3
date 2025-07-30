@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+:root {
+  --bg-color: #fdf6ec;
+  --card-color: #fffaf2;
+  --text-color: #333;
+  --accent-color: #925e3c;
+  --soft-orange: #f4c6a5;
+  --olive: #9aa979;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.7;
+}
+
+/* Encabezado principal */
+.main-header {
+  text-align: center;
+  padding: 2rem;
+  background: #fff;
+  border-bottom: 3px solid var(--soft-orange);
+}
+
+.main-header h1 {
+  font-size: 2.5rem;
+  color: var(--accent-color);
+}
+
+.author {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.main-header img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-top: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* Contenido principal */
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 1rem;
+  gap: 4rem; /* MÁS SEPARACIÓN ENTRE CARDS */
+}
+
+/* Tarjetas (secciones) */
+article {
+  background: var(--card-color);
+  max-width: 900px;
+  width: 100%;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+article {
+  /* diseño visual */
+  background: var(--card-color);
+  max-width: 900px;
+  width: 100%;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Esta es la clave: margen solo a los que NO sean el último */
+article:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+
+article:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+article h2 {
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+article ul {
+  padding-left: 1.2rem;
+}
+
+article p,
+article li {
+  font-size: 1.05rem;
+}
+
+/* Footer */
+.main-footer {
+  text-align: center;
+  background: var(--soft-orange);
+  color: #fff;
+  padding: 1rem;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+  border-top: 2px solid var(--accent-color);
+  border-radius: 0 0 8px 8px;
+}
